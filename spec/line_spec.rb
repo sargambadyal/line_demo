@@ -26,6 +26,17 @@ describe Line do
       expect(line.length).to eq(5)
     end
 
+    it "return integer length 6 when coordinates are (1,3) and (7,4)" do
+      line=Line.new(1,3,7,4)
+      expect(line.length).to eq(6)
+    end
+
+    it "return integer length 4 when coordinates are (3,2) and (6,5)" do
+      line=Line.new(3,2,6,5)
+      expect(line.length).to eq(4)
+    end
+
+
   end
 
 
