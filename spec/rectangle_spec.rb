@@ -11,7 +11,7 @@ describe 'Rectangle' do
   it 'Returns perimeter as 4 if given coordinates are (0,1) & (1,0)' do
     coordinate1=Coordinate.new(0, 1)
     coordinate2=Coordinate.new(1, 0)
-    expect(coordinate1.perimeter(coordinate2).to eq(4))
+    expect(coordinate1.perimeter(coordinate2)).to eq(4)
   end
 
 

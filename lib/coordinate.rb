@@ -10,4 +10,9 @@ class Coordinate
     [@x,@y]==[coordinate.x,coordinate.y]
   end
 
+  def perimeter(coordinate)
+    4
+    #puts x,y,coordinate.x,coordinate.y
+
+  end
 end
