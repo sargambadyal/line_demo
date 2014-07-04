@@ -39,5 +39,33 @@ describe Line do
 
   end
 
+  context "comparing two lines" do
+
+    let(:line1) {Line.new(1,1,2,1)}
+
+    it "should be true if the coordinates are same " do
+      expect(line1).to eq(line1)
+    end
+
+    it "should be true if the coordinates of one line is reverse of other " do
+      line2=Line.new(2,1,1,1)
+      expect(line1).to eq(line2)
+    end
+
+    it "should be false if the coordinates are different " do
+      line2=Line.new(1,1,3,1)
+      expect(line1).to eq(line2)
+    end
+
+    it "should be false if the line length is 0 " do
+      line2=Line.new(1,1,1,1)
+      expect(line1).to eq(line2)
+    end
+
+
+  end
+
+
+
 
 end
