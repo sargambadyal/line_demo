@@ -75,7 +75,9 @@ describe Line do
       it "should return coordinates" do
 
         line = Line.new(1,2,3,4)
-        expect(line.coordinates).to eq([1,2,3,4])
+        coordinate1 = Coordinate.new(1,2)
+        coordinate2 = Coordinate.new(3,4)
+        expect(line.coordinates).to eq([coordinate1,coordinate2])
       end
 
     end
