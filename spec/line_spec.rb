@@ -44,7 +44,9 @@ describe Line do
     let(:line1) {Line.new(1,1,2,1)}
 
     it "should be true if the coordinates are same " do
-      expect(line1).to eq(line1)
+
+      line3=Line.new(1,1,2,1)
+      expect(line1).to eq(line3)
     end
 
     it "should be true if the coordinates of one line is reverse of other " do
@@ -54,12 +56,18 @@ describe Line do
 
     it "should be false if the coordinates are different " do
       line2=Line.new(1,1,3,1)
-      expect(line1).to eq(line2)
+      expect(line1).to_not eq(line2)
+    end
+
+    it "should be false if the line length is 0 " do
+      line3 = Line.new(1,1,1,1)
+      expect(line1).to_not eq(line3)
     end
 
     it "should be false if the line length is 0 " do
       line2=Line.new(1,1,1,1)
-      expect(line1).to eq(line2)
+      line3 = Line.new(1,1,1,1)
+      expect(line3).to_not eq(line2)
     end
 
 
