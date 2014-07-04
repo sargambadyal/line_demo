@@ -8,12 +8,8 @@ class Line
   end
 
   def length
-    #if @x1==@x2 && @y1==@y2
-    if [@x1,@y1] == [@x2,@y2]
-      0
-    else
-      1
-    end
+    Math.sqrt((@x1 - @x2)**2 + (@y1 - @y2)**2)
+
   end
 
 end
