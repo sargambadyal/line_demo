@@ -5,8 +5,6 @@ class Line
     @coordinate1 = Coordinate.new(x1,y1)
     @coordinate2 = Coordinate.new(x2,y2)
 
-
-
   end
 
   def length
