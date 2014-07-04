@@ -12,12 +12,12 @@ class Line
     Math.sqrt((@x1 - @x2)**2 + (@y1 - @y2)**2).floor
   end
 
+  def coordinates
+    [@x1,@y1,@x2,@y2]
+  end
+
   def ==(line)
-     if (length > 0 || line.length >0) &&
-         (([@x1,@y1]==[line.x1,line.y1] && [@x2,@y2]==[line.x2,line.y2]) || ([@x1,@y1] == [line.x2,line.y2] && [@x2,@y2] == [line.x1,line.y1]))
-      true
-    else
-      false
-    end
+    (length > 0 || line.length >0) &&
+         ((coordinates == line.coordinates) || (line.coordinates == [@x2,@y2,@x1,@y1])) ? true :false
   end
 end

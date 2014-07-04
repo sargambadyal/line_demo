@@ -70,6 +70,15 @@ describe Line do
       expect(line3).to_not eq(line2)
     end
 
+    context "#coordinates" do
+
+      it "should return coordinates" do
+
+        line = Line.new(1,2,3,4)
+        expect(line.coordinates).to eq([1,2,3,4])
+      end
+
+    end
 
   end
 
