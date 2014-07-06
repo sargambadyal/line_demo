@@ -10,10 +10,5 @@ class Coordinate
     [@x,@y]==[coordinate.x,coordinate.y]
   end
 
-  def perimeter(coordinate)
-    line1=Line.new(x,coordinate.y,x,y)
-    line2=Line.new(x,coordinate.y,coordinate.x,coordinate.y)
-    2 * (line1.length + line2.length)
 
-  end
 end
