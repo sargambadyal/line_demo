@@ -13,4 +13,11 @@ class Rectangle #has a not is a
      2 * (line1.length + line2.length)
 
    end
+
+  def area()
+    line1=Line.new(@top_left.x,@bottom_right.y,@top_left.x,@top_left.y)
+    line2=Line.new(@bottom_right.x,@bottom_right.y,@top_left.x,@bottom_right.y)
+    (line1.length * line2.length)
+
+  end
 end
